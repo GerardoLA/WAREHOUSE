@@ -34,3 +34,4 @@ public double precioTotal() {
 	/*precio heredado de articulo cuando se haga?? */
 }
 }
+
