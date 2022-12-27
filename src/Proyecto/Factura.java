@@ -1,5 +1,6 @@
 package Proyecto;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -11,6 +12,14 @@ public class Factura {
 	private Date fecha;
 	private String concepto;
 	private ArrayList<LineaFactura>lineas=new ArrayList<LineaFactura>();
+	
+	
+	public void mostrarEnPantalla() {
+		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
+	this.nombreEmpresa + "fecha : "+ new SimpleDateFormat("dd/MM/yyyy").format(this.fecha) + "Concepto : "+
+				this.concepto);
+	}
+	
 	
 	public void eliminarLinea(int numeroLinea) {
 		Scanner scan=new Scanner(System.in);
