@@ -1,6 +1,7 @@
 package Proyecto;
 
 public class Articulo {
+	//atributos
 	private String code;
 	private String name;
 	private String mark;
@@ -8,6 +9,22 @@ public class Articulo {
 	private double precio;
 	private int stock;
 	
+	//constructores
+	
+	public Articulo(){}
+	
+	
+	public Articulo(String code, String name, String mark, int capadidadBotella, double precio, int stock) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.mark = mark;
+		this.capadidadBotella = capadidadBotella;
+		this.precio = precio;
+		this.stock = stock;
+	}
+
+
 	public String getCode() {
 		return code;
 	}
