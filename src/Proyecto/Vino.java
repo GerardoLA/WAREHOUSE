@@ -1,6 +1,7 @@
 package Proyecto;
 
-public class Vino {
+public class Vino extends Articulo implements Alcoholico {
+	
 	private String color;
 	private String origen;
 	private int anio;
@@ -15,6 +16,8 @@ public class Vino {
 		this.color = color;
 	}
 	
+	
+
 	public String getOrigen() {
 		return origen;
 	}
@@ -46,6 +49,19 @@ public class Vino {
 	public void setGradosAlcohol(double gradosAlcohol) {
 		this.gradosAlcohol = gradosAlcohol;
 	}
+
+	@Override
+	public boolean esFuerte() {
 	
+		return false;
+	}
+
+	@Override
+	public double calcularTasa() {
+		
+		return 0;
+	}
+	
+
 
 }
