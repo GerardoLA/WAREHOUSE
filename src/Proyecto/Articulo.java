@@ -1,8 +1,10 @@
 package Proyecto;
 
-public class Articulo {
+public abstract class Articulo {
 	//atributos
 	private String code;
+	
+
 	private String name;
 	private String mark;
 	private int capadidadBotella;
@@ -73,5 +75,9 @@ public class Articulo {
 		this.stock = stock;
 	}
 	
-
+	@Override
+	public String toString() {
+		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capadidadBotella=" + capadidadBotella
+				+ ", precio=" + precio + ", stock=" + stock + "]";
+	}
 }
