@@ -80,4 +80,14 @@ public abstract class Articulo {
 		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capadidadBotella=" + capadidadBotella
 				+ ", precio=" + precio + ", stock=" + stock + "]";
 	}
+	
+	public void  incrementarStock(int cantidad) {
+		cantidad = cantidad +1; // podria ser con un atributo compra metido con Scanner scan
+	}
+	
+	public void disminuirStock(int cantidad) {
+		cantidad = cantidad -1; // podria ser con un atributo venta metido con Scanner scan
+	}
+	
+	
 }
