@@ -10,8 +10,9 @@ public class Cerveza extends Articulo implements Alcoholico{
 	
 	public Cerveza () {}
 	
-	public Cerveza(String origen, String cereales, double gradosAlcohol) {
-		super();
+	public Cerveza(String origen, String cereales, double gradosAlcohol, String code, String name, String mark, int capacidadBotella,
+			double precio, int stock) {
+		super(code, name, mark, capacidadBotella, precio, stock);
 		this.origen = origen;
 		this.cereales = cereales;
 		this.gradosAlcohol = gradosAlcohol;

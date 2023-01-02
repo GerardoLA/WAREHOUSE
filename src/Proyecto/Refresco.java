@@ -5,6 +5,16 @@ public class Refresco extends Articulo {
 	private String zumo;
 	private boolean gaseoso;
 	private int cantidadAzucar;
+	
+	
+	public Refresco() {
+		super();
+	}
+	
+	
+	
+	
+	
 	public String getSabor() {
 		return sabor;
 	}

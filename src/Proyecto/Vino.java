@@ -8,6 +8,33 @@ public class Vino extends Articulo implements Alcoholico {
 	private String tipoDeUva;
 	private double gradosAlcohol;
 	
+	//constructores  y con super para que herede lo del padre(artículo)
+	
+	public Vino() {
+		super();
+	
+	}
+
+	public Vino(String color, String origen, int anio, String tipoDeUva, double gradosAlcohol, String code, String name,
+			String mark, int capadidadBotella, double precio, int stock) {
+		super(code, name, mark, capadidadBotella, precio, stock);
+		this.color=color;
+		this.origen=origen;
+		this.anio=anio;
+		this.tipoDeUva=tipoDeUva;
+		this.gradosAlcohol=gradosAlcohol;
+		
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		
+		return super.toString()+ "color =" + color+ " origen : "+ origen + "anio = "+anio +"tipo de uva = "+ tipoDeUva
+				+ "grados de alcohol = "+ gradosAlcohol;
+	}
+
 	public String getColor() {
 		return color;
 	}

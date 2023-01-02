@@ -1,13 +1,13 @@
 package Proyecto;
 
 public abstract class Articulo {
+	
+	
 	//atributos
 	private String code;
-	
-
 	private String name;
 	private String mark;
-	private int capadidadBotella;
+	private int capacidadBotella;
 	private double precio;
 	private int stock;
 	
@@ -16,12 +16,12 @@ public abstract class Articulo {
 	public Articulo(){}
 	
 	
-	public Articulo(String code, String name, String mark, int capadidadBotella, double precio, int stock) {
-		super();
+	public Articulo(String code, String name, String mark, int capacidadBotella, double precio, int stock) {
+		
 		this.code = code;
 		this.name = name;
 		this.mark = mark;
-		this.capadidadBotella = capadidadBotella;
+		this.capacidadBotella = capacidadBotella;
 		this.precio = precio;
 		this.stock = stock;
 	}
@@ -51,12 +51,12 @@ public abstract class Articulo {
 		this.mark = mark;
 	}
 	
-	public int getCapadidadBotella() {
-		return capadidadBotella;
+	public int getCapacidadBotella() {
+		return capacidadBotella;
 	}
 	
-	public void setCapadidadBotella(int capadidadBotella) {
-		this.capadidadBotella = capadidadBotella;
+	public void setCapadidadBotella(int capacidadBotella) {
+		this.capacidadBotella = capacidadBotella;
 	}
 	
 	public double getPrecio() {
@@ -75,9 +75,10 @@ public abstract class Articulo {
 		this.stock = stock;
 	}
 	
+	
 	@Override
 	public String toString() {
-		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capadidadBotella=" + capadidadBotella
+		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capadidadBotella=" + capacidadBotella
 				+ ", precio=" + precio + ", stock=" + stock + "]";
 	}
 	
