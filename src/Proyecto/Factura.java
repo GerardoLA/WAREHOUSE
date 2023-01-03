@@ -7,13 +7,27 @@ import java.util.Scanner;
 
 public class Factura {
 	
+	
+	public final static int IVA = 21;
 	private int numero;
 	private String nombreEmpresa;
 	private Date fecha;
 	private String concepto;
-	private ArrayList<LineaFactura>lineas=new ArrayList<LineaFactura>();
+	private ArrayList<LineaFactura>lineas;
 	
 	
+	
+	
+	public Factura(int numero, String nombreEmpresa, Date fecha, String concepto, ArrayList<LineaFactura> lineas) {
+		
+		this.numero = numero;
+		this.nombreEmpresa = nombreEmpresa;
+		this.fecha = fecha;
+		this.concepto = concepto;
+		this.lineas = new ArrayList<LineaFactura>();
+	}
+
+
 	public void mostrarEnPantalla() {
 		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
 	this.nombreEmpresa + "fecha : "+ new SimpleDateFormat("dd/MM/yyyy").format(this.fecha) + "Concepto : "+
@@ -68,8 +82,15 @@ public class Factura {
 		return lineas;
 	}
 	
-	public void setLineas(ArrayList<LineaFactura> lineas) {
-		this.lineas = lineas;
+	public void setLineas(ArrayList<LineaFactura> linea) {
+		this.lineas = linea;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return "Factura: numero= " + numero + "Nombre de la empresa = " + nombreEmpresa + "Fecha : "+ fecha
+				+ "Concepto : " + concepto + "Linea : " + lineas;
 	}
 
 }
