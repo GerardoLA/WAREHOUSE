@@ -39,6 +39,31 @@ public class Vino extends Articulo implements Alcoholico {
 		return color;
 	}
 	
+	@Override
+	public void visualizarArticulo() {
+		// TODO Auto-generated method stub
+		System.out.println(this.toString());
+	}
+
+	@Override
+	public boolean saludable() {
+		boolean saludable = false;
+		if(origen.equals("Navarra")) {
+			
+			saludable = true;
+		}
+		// TODO Auto-generated method stub
+		return saludable;
+	}
+
+	@Override
+	public double precioTotal() {
+		// TODO Auto-generated method stub
+		double precioTotal=0.0;
+		precioTotal=this.getStock()*this.getPrecio();
+		return precioTotal;
+	}
+
 	public void setColor(String color) {
 		this.color = color;
 	}
@@ -79,8 +104,11 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public boolean esFuerte() {
-	
-		return false;
+		boolean esFuerte = false;
+		if(gradosAlcohol>13.5) {
+			esFuerte=true;
+		}
+		return esFuerte;
 	}
 
 	@Override
