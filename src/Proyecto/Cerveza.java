@@ -47,14 +47,41 @@ public class Cerveza extends Articulo implements Alcoholico{
 	
 	@Override
 	public boolean esFuerte() {
-		
-		return false;
+		boolean esFuerte = false;
+		if(gradosAlcohol>7) {
+			esFuerte=true;
+		}
+		return esFuerte;
 	}
 
 	@Override
 	public double calcularTasa() {
 	
 		return 0;
+	}
+
+	@Override
+	public void visualizarArticulo() {
+		System.out.println(this.toString());
+		
+	}
+	//el enunciado no dice cuando una cerveza es saludable...pero..
+	@Override
+	public boolean saludable() {
+		boolean saludable = false;
+		if(this.origen.equals("EuskalHerria")) {
+			saludable= true;
+		}
+		return saludable;
+	}
+
+	@Override
+	public double precioTotal() {
+		double precioTotal=0.0;
+		precioTotal= this.getPrecio()*this.getStock();
+		
+		
+		return precioTotal;
 	}
 	
 }

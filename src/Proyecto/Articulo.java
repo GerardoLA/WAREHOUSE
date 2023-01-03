@@ -83,11 +83,11 @@ public abstract class Articulo {
 	}
 	
 	public void  incrementarStock(int cantidad) {
-		stock = stock + cantidad;
+		this.stock = this.stock + cantidad;
 	}
 	
 	public void disminuirStock(int cantidad) {
-		stock = stock + cantidad;
+		this.stock = this.stock + cantidad;
 	}
 	
 	
