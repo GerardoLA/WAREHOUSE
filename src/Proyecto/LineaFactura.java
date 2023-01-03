@@ -65,6 +65,7 @@ public String toString() {
 	
 	return "LineaFactura; numero : "+numero + "Artículo = " + articulo + "CAntidad = " + cantidad ;
 
+	
 
 
 	}
