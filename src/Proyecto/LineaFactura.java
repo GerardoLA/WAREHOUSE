@@ -2,7 +2,7 @@ package Proyecto;
 
 public class LineaFactura {
 private int numero;
-private String articulo;
+private String articulo; // en enunciado articulo:Articulo??
 private int cantidad;
 
 public int getNumero() {
@@ -33,5 +33,10 @@ public double precioTotal() {
 	return precio*cantidad;
 	/*precio heredado de articulo cuando se haga?? */
 }
+
+
+
+
+
 }
 
