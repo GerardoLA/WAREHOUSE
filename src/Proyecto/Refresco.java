@@ -56,7 +56,7 @@ public class Refresco extends Articulo {
 		this.cantidadAzucar = cantidadAzucar;
 	}
 	
-	//DUDA: string toString con super??
+	
 	@Override
 	public String toString() {
 		return super.toString() + "Refresco [sabor=" + sabor + ", zumo=" + zumo + ", gaseoso=" + gaseoso + ", cantidadAzucar="
@@ -70,12 +70,35 @@ public class Refresco extends Articulo {
 		System.out.println("sabor :" + this.sabor + "; zumo : "+ this.zumo + "Gaseoso : "+ this.gaseoso + "; cantidadAzucar: "+ this.cantidadAzucar);
 	}
 	
+	// he hecho este metodo distinto aunque podia haber sobreescrito el metodo heredado saludable de articulo
 	public boolean esSaludable() {
 		boolean esSaludable = false;
 		if (cantidadAzucar<20) {
 			esSaludable = true;	
 		}
 		return esSaludable;
+	}
+
+
+	@Override
+	public void visualizarArticulo() {
+		System.out.println(this.toString());
+		
+	}
+
+
+	@Override
+	public boolean saludable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public double precioTotal() {
+		double precioTotal=0.0;
+		precioTotal=this.getStock()*this.getPrecio();
+		return precioTotal;
 	}
 
 
