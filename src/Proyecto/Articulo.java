@@ -83,11 +83,11 @@ public abstract class Articulo {
 	}
 	
 	public void  incrementarStock(int cantidad) {
-		cantidad = cantidad +1; // podria ser con un atributo compra metido con Scanner scan
+		stock = stock + cantidad;
 	}
 	
 	public void disminuirStock(int cantidad) {
-		cantidad = cantidad -1; // podria ser con un atributo venta metido con Scanner scan
+		stock = stock + cantidad;
 	}
 	
 	
