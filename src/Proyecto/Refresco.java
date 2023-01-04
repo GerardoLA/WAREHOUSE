@@ -59,8 +59,8 @@ public class Refresco extends Articulo {
 	
 	@Override
 	public String toString() {
-		return super.toString() + "Refresco [sabor=" + sabor + ", zumo=" + zumo + ", gaseoso=" + gaseoso + ", cantidadAzucar="
-				+ cantidadAzucar + "]";
+		return super.toString() +";"+ "Refresco [sabor=" + sabor +";"+ " zumo=" + zumo +";"+
+	" gaseoso=" + gaseoso +";"+ " cantidadAzucar="+ cantidadAzucar + "]";
 	}
 	
 	

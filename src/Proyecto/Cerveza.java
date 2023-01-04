@@ -20,6 +20,13 @@ public class Cerveza extends Articulo implements Alcoholico{
 	
 	
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString()+";"+" Origen= "+ origen + ";"+ "Cereales = "+ cereales + ";"+
+				" grados de alcohol = "+gradosAlcohol;
+	}
+
 	public String getOrigen() {
 		return origen;
 	}
@@ -83,5 +90,6 @@ public class Cerveza extends Articulo implements Alcoholico{
 		
 		return precioTotal;
 	}
+	
 	
 }
