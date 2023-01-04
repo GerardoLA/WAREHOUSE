@@ -78,8 +78,9 @@ public abstract class Articulo {
 	
 	@Override
 	public String toString() {
-		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capadidadBotella=" + capacidadBotella
-				+ ", precio=" + precio + ", stock=" + stock + "]";
+		return "Articulo [code=" + code + ";"+ " name=" + name + ";" + " mark=" + mark + ";"
+	+ " capadidadBotella=" + capacidadBotella+ ";" + " precio=" + precio + ";" +
+		" stock=" + stock + "]";
 	}
 	
 	public void  incrementarStock(int cantidad) {
