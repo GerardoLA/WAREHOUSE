@@ -88,7 +88,7 @@ public abstract class Articulo {
 	}
 	
 	public void disminuirStock(int cantidad) {
-		this.stock = this.stock + cantidad;
+		this.stock = this.stock - cantidad;
 	}
 	
 	

@@ -12,16 +12,16 @@ public class Refresco extends Articulo {
 	}
 
 
-	public Refresco(String sabor, String zumo, boolean gaseoso, int cantidadAzucar,String code, String name,
-			String mark, int capacidadBotella, double precio, int stock) {
+	public Refresco(String code, String name,String mark, int capacidadBotella, double precio, int stock,String sabor, String zumo, boolean gaseoso, int cantidadAzucar) {
 		super(code, name, mark, capacidadBotella, precio, stock);
+		
 		this.sabor = sabor;
 		this.zumo = zumo;
 		this.gaseoso = gaseoso;
 		this.cantidadAzucar = cantidadAzucar;
 	}
 
-
+	
 
 
 

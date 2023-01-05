@@ -15,8 +15,8 @@ public class Vino extends Articulo implements Alcoholico {
 	
 	}
 
-	public Vino(String color, String origen, int anio, String tipoDeUva, double gradosAlcohol, String code, String name,
-			String mark, int capadidadBotella, double precio, int stock) {
+	public Vino( String code, String name,
+			String mark, int capadidadBotella, double precio, int stock,String color, String origen, int anio, String tipoDeUva, double gradosAlcohol) {
 		super(code, name, mark, capadidadBotella, precio, stock);
 		this.color=color;
 		this.origen=origen;
