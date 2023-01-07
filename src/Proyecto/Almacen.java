@@ -3,13 +3,21 @@ package Proyecto;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class Almacen {
+public class Almacen  {
+	
+	ArrayList<Articulo>articulos = new ArrayList<>();
+	
+	public Almacen() {}
+		
+	public ArrayList<Articulo> getArticulos(){
+		return articulos;
+	}
+	
 	
 	final String NOMBRE_FICHERO = "datos/bebidas.txt"; //ojo comprobar dirección bien
-	
-	ArrayList<Articulo>articulos=new ArrayList<>();
 	
 	public void cargarDatos() throws FileNotFoundException {
 		File file = new File("NOMBRE_FICHERO");
@@ -69,21 +77,48 @@ public class Almacen {
 				}	
 			}
 		return false;
-		
+			
 		}
 		
-		public ArrayList<Articulo> stockJusto(int sotck){
-			ArrayList<Articulo> articulosStockJusto = new ArrayList<Articulo>();
+		public ArrayList<Articulo>stockJusto(int stock){
+			ArrayList<Articulo>articulosStockJusto = new ArrayList<>();
 			
 			for (Articulo articulo : articulos) {
-				if(articulo.getStock() ==stock)	{
-					stockjusto.
+				if(articulo.getStock()== stock) {
+					articulosStockJusto.add(articulo);
+				}
+				
+			}
+		
+		return articulosStockJusto;
+		}
+		
+		/*el método articulo recibe un código y devuelve el objeto articulo entero.*/
+		public Articulo articulo(String codigo) {
+			Articulo articulo = null;
+			for (Articulo artic : articulos) {
+				if (codigo.equals(artic.getCode())) {
+					articulo=artic;
+				}
+				
+			}
+			return articulo;
+		}
+		/*El método disponibilidad recibe un número y un código de artículo, y si hay más unidades 
+		 * que el parámetro número que ha recibido devolverá true, si no false.*/
+		public boolean disponibilidad (String codigoProducto, int stock) {
+			for (Articulo articulo : articulos) {
+				if(codigoProducto.equals(articulo.getCode()) && stock <= articulo.getStock()) {
+					return true;
 				}
 			}
-			
+		return false;
 		}
-	
+		
+		
+		
 	}
+	
 	
 
 
