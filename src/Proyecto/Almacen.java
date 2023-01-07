@@ -54,6 +54,7 @@ public class Almacen  {
 			Articulo articulo = null;
 			for (Articulo elMas : articulos) {
 				if (precio < elMas.getPrecio()) {
+					articulo = elMas;
 					precio = elMas.getPrecio();
 				}
 				
