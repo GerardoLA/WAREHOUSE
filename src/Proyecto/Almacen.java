@@ -71,6 +71,17 @@ public class Almacen {
 		return false;
 		
 		}
+		
+		public ArrayList<Articulo> stockJusto(int sotck){
+			ArrayList<Articulo> articulosStockJusto = new ArrayList<Articulo>();
+			
+			for (Articulo articulo : articulos) {
+				if(articulo.getStock() ==stock)	{
+					stockjusto.
+				}
+			}
+			
+		}
 	
 	}
 	
