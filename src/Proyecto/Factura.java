@@ -27,6 +27,7 @@ public class Factura {
 		this.lineas = new ArrayList<LineaFactura>();
 	}
 
+	//faltan metodos precioTotal y guardarenFichero
 
 	public void mostrarEnPantalla() {
 		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
