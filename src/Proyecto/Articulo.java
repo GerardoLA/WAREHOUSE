@@ -88,7 +88,11 @@ public abstract class Articulo {
 	}
 	
 	public void disminuirStock(int cantidad) {
+		if(this.stock<cantidad || this.stock==0) {
+			System.out.println("No hay existencias");
+		}else {
 		this.stock = this.stock - cantidad;
+		}
 	}
 	
 	
