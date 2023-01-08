@@ -17,10 +17,10 @@ public class Almacen  {
 	}
 	
 	
-	final String NOMBRE_FICHERO = "datos/bebidas.txt"; //ojo comprobar dirección bien
+	//final String NOMBRE_FICHERO = "datos/bebidas.txt"; //ojo comprobar dirección bien
 	
 	public void cargarDatos() throws FileNotFoundException {
-		File file = new File("NOMBRE_FICHERO");
+		File file = new File("datos/bebidas.txt");
 		Scanner scan = new Scanner (file);
 		
 		while(scan.hasNextLine()) {
@@ -46,7 +46,7 @@ public class Almacen  {
 				
 				articulos.add(cerveza);
 			}
-		}
+		}scan.close();
 	}
 	
 		public Articulo elMasCaro() {

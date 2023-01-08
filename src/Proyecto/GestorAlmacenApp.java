@@ -1,6 +1,7 @@
 package Proyecto;
 
 import java.io.FileNotFoundException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,28 +16,27 @@ public class GestorAlmacenApp {
 	private final static int VER_ARTICULOS_CON_MENOS_STOCK_QUE_X =5;
 	private final static int SALIR = 0;
 	
-	Scanner scan = new Scanner(System.in);
-	// final String NOMBRE_FICHERO = "datos/bebidas.txt";
+	
+	/*final String NOMBRE_FICHERO = "/Warehouse/datos/bebidas.txt";
+	Scanner scan = new Scanner(System.in);*/
+	
 	  public void run() throws FileNotFoundException {
-		  Almacen articulosAlmacen=new Almacen();
-		  articulosAlmacen.cargarDatos();
+		  
+		 /* Almacen articulosAlmacen=new Almacen();
+		  */
+		  Scanner scan = new Scanner(System.in);
+		  
+		Almacen articulosAlmacen=new Almacen();
+		 articulosAlmacen.cargarDatos();
 		  
 		  int opcion;
 		  
 		  do {
+			  
+			  menuPrincipal();
 			  opcion= Integer.parseInt(scan.nextLine());
 			  
-			  System.out.println("    MENU     ");
-			  System.out.println(REALIZAR_VENTA +".-Realizar venta");
-			  System.out.println(REALIZAR_COMPRA +".-Realizar compra");
-			  System.out.println(VER_ARTICULOS_SALUDABLES+".-Ver articulos saludables");
-			  System.out.println(VER_EL_ARTICULO_MAS_CARO+".- El artículo más caro es...");
-			  System.out.println(VER_ARTICULOS_CON_MENOS_STOCK_QUE_X+".-Saber qué articulos tienen menos"
-			  		+ "stock de...la cantidad que digas");
-			  System.out.println(SALIR+"Agur Benhur");
-			  
-			  System.out.println("MARQUE EL NÚMERO DE LA OPCIÓN DESEADA: ");
-			  
+			
 			  switch(opcion) {
 			  		case REALIZAR_VENTA:
 			  			realizarVenta();
@@ -56,6 +56,7 @@ public class GestorAlmacenApp {
 			  			break;
 				  
 			  		case SALIR:
+			  			System.out.println("AU REVOIRE");
 			  			break;
 				  
 			  		default:
@@ -64,10 +65,25 @@ public class GestorAlmacenApp {
 			  
 			  
 		  }while(opcion !=SALIR);
+		  
 	  
 	  
 	  
 	  }
+	private void menuPrincipal() {
+		// TODO Auto-generated method stub
+		  System.out.println("    MENU     ");
+		  System.out.println(REALIZAR_VENTA +".-Realizar venta");
+		  System.out.println(REALIZAR_COMPRA +".-Realizar compra");
+		  System.out.println(VER_ARTICULOS_SALUDABLES+".-Ver articulos saludables");
+		  System.out.println(VER_EL_ARTICULO_MAS_CARO+".- El artículo más caro es...");
+		  System.out.println(VER_ARTICULOS_CON_MENOS_STOCK_QUE_X+".-Saber qué articulos tienen menos"
+		  		+ "stock de...la cantidad que digas");
+		  System.out.println(SALIR+" SAlIR");
+		  
+		  System.out.println("MARQUE EL NÚMERO DE LA OPCIÓN DESEADA: ");
+		  
+	}
 	private void realizarCompra() {
 		// TODO Auto-generated method stub
 		
@@ -78,6 +94,6 @@ public class GestorAlmacenApp {
 	}
 	 
 	
-	
+	}	
 
-}
+

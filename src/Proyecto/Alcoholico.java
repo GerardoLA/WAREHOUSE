@@ -2,17 +2,16 @@ package Proyecto;
 
 public interface Alcoholico {
 	
-	public static final double TASA_BEBIDAS_FUERTES = 64.13;
-	public static final double TASA_BEBIDAS_SUAVES = 38.48;
+	 static final double TASA_BEBIDAS_FUERTES = 64.13;
+	 static final double TASA_BEBIDAS_SUAVES = 38.48;
 	
-	public boolean esFuerte() {
-		return false;
-	}
-	
-	public  double calcularTasa() {
+	public boolean esFuerte() ;
 		
-		return 0;
-	}
+	
+	
+	public  double calcularTasa() ;
+		
+	
 
 	
 }

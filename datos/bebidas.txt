@@ -1,0 +1,13 @@
+refresco;101;cocacola;33;0.39;80;cola;cola;false;35;
+refresco;102;cocacolaZero;33;0.39;80;cola;cola;true;0;
+refresco;103;kas;33;0.39;80;naranja;naranja;false;27;
+refresco;104;kas;33;0.39;80;limon;limon;false;25;
+refresco;105;cocacola;33;0.39;80;cola;cola;false;35;
+vino;201;Muga;38;11.50;48;tinto;rioja;2018;garnacha;14;
+vino;202;Muga;75;9.30;48;rosado;rioja;2021;garnacha;13;
+vino;203;GranFeudo;75;4.51;48;tinto;navarra;2017;tempranillo;14;
+vino;204;Muga;38;11.50;48;tinto;rioja;2018;garnacha;14;
+vino;205;Otazu;75;9.45;50;chardonnay;navarra;2021;chardonnay;13;
+cerverza;301;keler;25;0.50;98;Donosti;malta-cebada;6;
+cerverza;302;SanMiguel;25;0.54;98;Malaga;malta-cebada;5.5;
+cerverza;303;Mahou;100;1.79;40;Madrid;malta-cebada;4.5;
