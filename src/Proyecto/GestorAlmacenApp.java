@@ -56,7 +56,7 @@ public class GestorAlmacenApp {
 			  			break;
 				  
 			  		case SALIR:
-			  			System.out.println("AU REVOIRE");
+			  			System.out.println("AU REVOIR, CIAO, ADIOS, AGUR, BYE..QUE TE PIRES!");
 			  			break;
 				  
 			  		default:
