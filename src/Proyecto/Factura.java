@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+import clases.LineaFactura;
+
 public class Factura {
 	
 	
@@ -93,5 +95,20 @@ public class Factura {
 		return "Factura: numero= " + numero + "Nombre de la empresa = " + nombreEmpresa + "Fecha : "+ fecha
 				+ "Concepto : " + concepto + "Linea : " + lineas;
 	}
+	
+	/* modelo de otro ejercicio...
+	 * public void mostrarEnPantalla() {
+	System.out.println("Numero factura: " + this.numero + "\t\t" + this.nombreEmpresa);
+	System.out.println("Fecha: " + new SimpleDateFormat("dd/MM/yyyy").format(this.fecha));
+	System.out.println(this.concepto);
+	
+	System.out.println("num\tart.\tprecio\tcant.\ttotal");
+	System.out.println("---\t----\t-------\t-----\t-----");
+	for(LineaFactura lineaFactura : this.lineas) {
+		lineaFactura.mostrarEnPantalla();
+	}
+System.out.println("\t\t\t---Total: " + this.precioTotal());
+
+}*/
 
 }
