@@ -121,5 +121,9 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 		return precioTotal;
 	}
 	
+	public void guardarEnFichero() {
+		//TODO
+	}
+	
 	
 }
