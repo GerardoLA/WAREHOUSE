@@ -8,10 +8,10 @@ private int numero;
 private  Articulo articulo;
 private int cantidad;
 
-
+public LineaFactura() {}
 
 public LineaFactura(int numero, Articulo articulo, int cantidad) {
-	super();
+	
 	this.numero = numero;
 	this.articulo = articulo;
 	this.cantidad = cantidad;
