@@ -94,9 +94,11 @@ public class Almacen  {
 		return articulosStockJusto;
 		}
 		
+		
 		/*el método articulo recibe un código y devuelve el objeto articulo entero.*/
 		public Articulo articulo(String codigo) {
 			Articulo articulo = null;
+			
 			for (Articulo artic : articulos) {
 				if (codigo.equals(artic.getCode())) {
 					articulo=artic;
@@ -116,9 +118,16 @@ public class Almacen  {
 		return false;
 		}
 		
+		public ArrayList<Articulo>ordenarPorPrecio(String orden){
+			ArrayList<Articulo>ordenados = articulos;
+			//TODO
+			return ordenados ;	
+		}
 		
-		
-	}
+		public void ordenarPorStock(String orden) {
+			//TODO
+		}
+}
 	
 	
 
