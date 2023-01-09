@@ -1,9 +1,13 @@
 package Proyecto;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+
+import oop.gestorusuarios.Usuario;
 
 
 
@@ -31,21 +35,6 @@ public class Factura {
 
 	//faltan metodo guardarenFichero
 
-	public void mostrarEnPantalla() {
-		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
-	this.nombreEmpresa + "fecha : "+ new SimpleDateFormat("dd/MM/yyyy").format(this.fecha) + "Concepto : "+
-				this.concepto);
-	}
-	
-	
-	public void eliminarLinea(int numeroLinea) {
-		Scanner scan=new Scanner(System.in);
-		lineas.remove(numeroLinea);
-	}
-	
-	public void addLinea(LineaFactura linea) {
-		lineas.add(linea);
-	}
 	
 	
 	public int getNumero() {
@@ -89,11 +78,11 @@ public class Factura {
 		this.lineas = linea;
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "Factura: numero= " + numero + "Nombre de la empresa = " + nombreEmpresa + "Fecha : "+ fecha
-				+ "Concepto : " + concepto + "Linea : " + lineas;
+	
+	public void mostrarEnPantalla() {
+		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
+	this.nombreEmpresa + "fecha : "+ new SimpleDateFormat("dd/MM/yyyy").format(this.fecha) + "Concepto : "+
+				this.concepto);
 	}
 	
 	/* modelo de otro ejercicio...
@@ -111,6 +100,26 @@ public class Factura {
 System.out.println("\t\t\t---Total: " + this.precioTotal());
 
 }*/
+	
+	
+	public void eliminarLinea(int numeroLinea) {
+		Scanner scan=new Scanner(System.in);
+		lineas.remove(numeroLinea);
+	}
+	
+	public void addLinea(LineaFactura linea) {
+		lineas.add(linea);
+	}
+	
+	
+	@Override
+	public String toString() {
+		
+		return "Factura: numero= " + numero + "Nombre de la empresa = " + nombreEmpresa + "Fecha : "+ fecha
+				+ "Concepto : " + concepto + "Linea : " + lineas;
+	}
+	
+	
 
 	public double precioTotal() {
 		double precioTotal=0.0;
@@ -124,6 +133,20 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 	public void guardarEnFichero() {
 		//TODO
 	}
+	
+	/*	EJEMPLO
+	 * public static void guardarUsuarios(String nombrefichero, ArrayList<Usuario> usuarios) throws FileNotFoundException{
+		
+		PrintWriter writer = new PrintWriter(nombrefichero);
+		
+		for (Usuario usuario : usuarios) {
+			writer.println(usuario.enFormatoFichero());
+		}
+		
+		writer.close();
+		
+		
+	}*/
 	
 	
 }
