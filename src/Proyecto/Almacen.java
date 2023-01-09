@@ -85,7 +85,7 @@ public class Almacen  {
 			ArrayList<Articulo>articulosStockJusto = new ArrayList<>();
 			
 			for (Articulo articulo : articulos) {
-				if(articulo.getStock()== stock) {
+				if(articulo.getStock()<10) {
 					articulosStockJusto.add(articulo);
 				}
 				
