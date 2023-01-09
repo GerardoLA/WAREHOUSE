@@ -6,11 +6,10 @@ public interface Alcoholico {
 	 static final double TASA_BEBIDAS_SUAVES = 38.48;
 	
 	public boolean esFuerte() ;
-		
-	
 	
 	public  double calcularTasa() ;
 		
+	//en una interface nunca tienen cuerpo
 	
 
 	
