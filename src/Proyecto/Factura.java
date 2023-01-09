@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-import clases.LineaFactura;
+
 
 public class Factura {
 	
@@ -29,7 +29,7 @@ public class Factura {
 		this.lineas = new ArrayList<LineaFactura>();
 	}
 
-	//faltan metodos precioTotal y guardarenFichero
+	//faltan metodo guardarenFichero
 
 	public void mostrarEnPantalla() {
 		System.out.println("Numero de Factura:" + this.numero +"Nombre de empresa : "+
@@ -97,6 +97,7 @@ public class Factura {
 	}
 	
 	/* modelo de otro ejercicio...
+	 * 
 	 * public void mostrarEnPantalla() {
 	System.out.println("Numero factura: " + this.numero + "\t\t" + this.nombreEmpresa);
 	System.out.println("Fecha: " + new SimpleDateFormat("dd/MM/yyyy").format(this.fecha));
@@ -111,4 +112,14 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 
 }*/
 
+	public double precioTotal() {
+		double precioTotal=0.0;
+		for (LineaFactura lineaFactura : lineas) {
+			precioTotal=lineaFactura.precioTotal();	
+		}
+		
+		return precioTotal;
+	}
+	
+	
 }
