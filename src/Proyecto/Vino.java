@@ -74,6 +74,7 @@ public class Vino extends Articulo implements Alcoholico {
 		return origen;
 	}
 	
+	
 	public void setOrigen(String origen) {
 		this.origen = origen;
 	}
