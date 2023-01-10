@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-import oop.gestorusuarios.Usuario;
+
 
 
 
@@ -19,7 +19,7 @@ public class Factura {
 	private String nombreEmpresa;
 	private Date fecha;
 	private String concepto;
-	private ArrayList<LineaFactura>lineas;
+	 ArrayList<LineaFactura>lineas=new ArrayList<LineaFactura>();
 	
 	
 	
@@ -30,7 +30,7 @@ public class Factura {
 		this.nombreEmpresa = nombreEmpresa;
 		this.fecha = fecha;
 		this.concepto = concepto;
-		this.lineas = new ArrayList<LineaFactura>();
+		
 	}
 
 	//faltan metodo guardarenFichero
@@ -104,6 +104,9 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 	
 	public void eliminarLinea(int numeroLinea) {
 		Scanner scan=new Scanner(System.in);
+		System.out.println("introduce el numro de linea que deseas eliminar");
+		numeroLinea=scan.nextInt();
+		
 		lineas.remove(numeroLinea);
 	}
 	
