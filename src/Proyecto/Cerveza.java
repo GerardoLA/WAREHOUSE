@@ -76,7 +76,7 @@ public class Cerveza extends Articulo implements Alcoholico{
 	@Override
 	public boolean saludable() {
 		boolean saludable = false;
-		if(this.origen.equals("EuskalHerria")) {
+		if(this.origen.equals("Belgica")) {
 			saludable= true;
 		}
 		return saludable;
