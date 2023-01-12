@@ -35,13 +35,11 @@ public class Vino extends Articulo implements Alcoholico {
 				+ "anio = "+anio +";"+"tipo de uva = "+ tipoDeUva+";"+ "grados de alcohol = "+ gradosAlcohol +"]";
 	}
 
-	public String getColor() {
-		return color;
-	}
+	
 	
 	@Override
 	public void visualizarArticulo() {
-		// TODO Auto-generated method stub
+		
 		System.out.println(this.toString());
 	}
 
@@ -52,16 +50,23 @@ public class Vino extends Articulo implements Alcoholico {
 			
 			saludable = true;
 		}
-		// TODO Auto-generated method stub
+		
 		return saludable;
 	}
 
 	@Override
-	public double precioTotal() {
-		// TODO Auto-generated method stub
+	public void precioTotal() {
+		
 		double precioTotal=0.0;
-		precioTotal=this.getStock()*this.getPrecio();
-		return precioTotal;
+		precioTotal=this.getPrecio()+(this.getPrecio()*0.21)+calcularTasa() ;
+		System.out.println("El precio total, iva y tasa de bebidas incluidas"
+				+ " es "+ precioTotal);
+		
+		
+	}
+	
+	public String getColor() {
+		return color;
 	}
 
 	public void setColor(String color) {
@@ -114,8 +119,18 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public double calcularTasa() {
+		double tasa;
 		
-		return 0;
+		/*tasa_bebidas_fuertes/10000 porque la
+		capacidad de la botella la he puesto en centilitros*/
+		
+		if(this.esFuerte()) {
+			tasa =(this.getCapacidadBotella()*TASA_BEBIDAS_FUERTES)/10000;
+		}else {
+			tasa=(this.getCapacidadBotella()*TASA_BEBIDAS_SUAVES)/10000;
+		}
+		return tasa;
+		
 	}
 	
 
