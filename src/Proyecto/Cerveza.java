@@ -22,7 +22,7 @@ public class Cerveza extends Articulo implements Alcoholico{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return super.toString()+";"+" Origen= "+ origen + ";"+ "Cereales = "+ cereales + ";"+
 				" grados de alcohol = "+gradosAlcohol;
 	}
@@ -55,7 +55,7 @@ public class Cerveza extends Articulo implements Alcoholico{
 	@Override
 	public boolean esFuerte() {
 		boolean esFuerte = false;
-		if(gradosAlcohol > 7) {
+		if(this.gradosAlcohol > 7) {
 			esFuerte=true;
 		}
 		return esFuerte;
@@ -63,8 +63,14 @@ public class Cerveza extends Articulo implements Alcoholico{
 
 	@Override
 	public double calcularTasa() {
+		double tasa;
+		if(this.esFuerte()) {
+			tasa=this.getCapacidadBotella()*TASA_BEBIDAS_FUERTES/10000;
+			
+		}else
+			tasa=this.getCapacidadBotella()*TASA_BEBIDAS_SUAVES/10000;
 	
-		return 0;
+		return tasa;
 	}
 
 	@Override
@@ -72,23 +78,24 @@ public class Cerveza extends Articulo implements Alcoholico{
 		System.out.println(this.toString());
 		
 	}
-	//el enunciado no dice cuando una cerveza es saludable...pero..
+	
 	@Override
 	public boolean saludable() {
 		boolean saludable = false;
-		if(this.origen.equals("Belgica")) {
+		if(this.cereales.equals("lupulo")) {
 			saludable= true;
 		}
 		return saludable;
 	}
 
 	@Override
-	public double precioTotal() {
+	public void precioTotal() {
 		double precioTotal=0.0;
-		precioTotal= this.getPrecio()*this.getStock();
+		precioTotal= this.getPrecio()+this.getPrecio()*0.21+calcularTasa();
+		System.out.println("El precio+iva+tasa de bebidas: "+ precioTotal);
 		
 		
-		return precioTotal;
+		
 	}
 	
 	
