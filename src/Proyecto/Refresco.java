@@ -70,14 +70,6 @@ public class Refresco extends Articulo {
 		System.out.println("sabor :" + this.sabor + "; zumo : "+ this.zumo + "Gaseoso : "+ this.gaseoso + "; cantidadAzucar: "+ this.cantidadAzucar);
 	}
 	
-	// he hecho este metodo distinto aunque podia haber sobreescrito el metodo heredado saludable de articulo
-	public boolean esSaludable() {
-		boolean esSaludable = false;
-		if (cantidadAzucar<20) {
-			esSaludable = true;	
-		}
-		return esSaludable;
-	}
 
 
 	@Override
@@ -89,16 +81,20 @@ public class Refresco extends Articulo {
 
 	@Override
 	public boolean saludable() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean saludable = false;
+		if(this.cantidadAzucar<20) {
+			saludable=true;
+		}
+		return saludable;
 	}
 
 
 	@Override
-	public double precioTotal() {
+	public void precioTotal() {
 		double precioTotal=0.0;
-		precioTotal=this.getStock()*this.getPrecio();
-		return precioTotal;
+		precioTotal=this.getPrecio()+this.getPrecio()*0.21;
+		System.out.println("el precio total iva incluido es :"+ precioTotal);
+		
 	}
 
 
