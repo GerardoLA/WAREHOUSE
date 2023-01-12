@@ -47,7 +47,13 @@ public class GestorAlmacenApp {
 			  			break;
 			  	
 			  		case VER_ARTICULOS_SALUDABLES:
-			  			System.out.println(" ");
+			  			System.out.println("Son: ");
+			  			for ( Articulo a:articulosAlmacen.articulos) {
+			  				if(a.saludable()) {
+			  					System.out.println(a);
+			  				}
+							
+						}
 			  			break;
 				  
 			  		case VER_EL_ARTICULO_MAS_CARO:
