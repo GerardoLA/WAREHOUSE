@@ -102,7 +102,7 @@ public abstract class Articulo {
 	
 	public abstract boolean saludable();
 	
-	public abstract double precioTotal();
+	public abstract void precioTotal();
 	
 	
 }
