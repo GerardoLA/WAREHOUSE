@@ -16,10 +16,10 @@ public abstract class Articulo {
 	public Articulo(){}
 	
 	
-	public Articulo(String code, String name, String mark, int capacidadBotella, double precio, int stock) {
+	public Articulo(String name,String code,String mark, int capacidadBotella, double precio, int stock) {
 		
-		this.code = code;
 		this.name = name;
+		this.code = code;
 		this.mark = mark;
 		this.capacidadBotella = capacidadBotella;
 		this.precio = precio;
