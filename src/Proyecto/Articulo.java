@@ -35,6 +35,7 @@ public abstract class Articulo {
 		this.code = code;
 	}
 	
+	
 	public String getName() {
 		return name;
 	}
