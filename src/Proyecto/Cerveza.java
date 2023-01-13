@@ -82,7 +82,7 @@ public class Cerveza extends Articulo implements Alcoholico{
 	@Override
 	public boolean saludable() {
 		boolean saludable = false;
-		if(this.cereales.equals("lupulo")) {
+		if(this.cereales.toLowerCase().contains("lupulo"))  {
 			saludable= true;
 		}
 		return saludable;
