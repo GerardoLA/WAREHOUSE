@@ -5,6 +5,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class GestorAlmacenApp {
 	
 	//menu de los casos de uso
@@ -61,6 +63,23 @@ public class GestorAlmacenApp {
 			  			break;
 				  
 			  		case VER_ARTICULOS_CON_MENOS_STOCK_QUE_X :
+			  			System.out.println("ver el articulo que tenga menos stock de??introduce el número :");
+			  			
+			  			int x= Integer.parseInt(scan.nextLine());
+			  			
+			  			System.out.println("los articulos con menos stock de "+ x +"son :");
+			  			
+			  			 for ( Articulo a:articulosAlmacen.articulos) {
+			  				 if(a.getStock()< x) {
+			  					 System.out.println(a.getName()+" "+ a.getMark()+",con codigo "+ a.getCode()+" "+" quedan :"+ a.getStock()+" unidades");
+			  				 }
+			  					 
+							
+						}
+			  			
+			  			
+			  			
+			  			System.out.println("Estos artículos tienen menos stock que : "+ x );
 			  			break;
 				  
 			  		case SALIR:
