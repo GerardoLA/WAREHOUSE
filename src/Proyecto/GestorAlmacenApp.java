@@ -71,7 +71,9 @@ public class GestorAlmacenApp {
 			  			
 			  			 for ( Articulo a:articulosAlmacen.articulos) {
 			  				 if(a.getStock()< x) {
-			  					 System.out.println(a.getName()+" "+ a.getMark()+",con codigo "+ a.getCode()+" "+" quedan :"+ a.getStock()+" unidades");
+			  			/*		 System.out.println(a.getName()+" "+ a.getMark()+",con codigo "+ a.getCode()+" "+" quedan :"+ a.getStock()+" unidades");*/
+			  					 a.visualizarArticulo();
+			  					 
 			  				 }
 			  					 
 							
@@ -112,12 +114,17 @@ public class GestorAlmacenApp {
 		  System.out.println("MARQUE EL NÚMERO DE LA OPCIÓN DESEADA: ");
 		  
 	}
-	private void realizarCompra() {
-		// TODO Auto-generated method stub
+	private void realizarCompra() throws FileNotFoundException {
+		Almacen articulosAlmacen=new Almacen();
+		 articulosAlmacen.cargarDatos();
+		 
+		 
+		 
+		
 		
 	}
 	private void realizarVenta() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	 
