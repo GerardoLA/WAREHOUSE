@@ -68,22 +68,20 @@ public class GestorAlmacenApp {
 			  			int x= Integer.parseInt(scan.nextLine());
 			  			
 			  			System.out.println("los articulos con menos stock de "+ x +"son :");
-			  			
+			  			int contador=0;
 			  			 for ( Articulo a:articulosAlmacen.articulos) {
 			  				 if(a.getStock()< x) {
-			  			/*		 System.out.println(a.getName()+" "+ a.getMark()+",con codigo "+ a.getCode()+" "+" quedan :"+ a.getStock()+" unidades");*/
-			  					 a.visualizarArticulo();
-			  					 
-			  				 }
-			  					 
-							
-			  
-						}
+			  					 System.out.println(a.getName()+" "+ a.getMark()+",con codigo "+ a.getCode()+" "+" quedan :"+ a.getStock()+" unidades");
+			  					contador++;
+			  					 //También se podría con "visualizarArticulo, saldria el articulo entero..
+			  					 /* a.visualizarArticulo();*/	 
+			  				 		}
+			  				 
+			  							}if(contador==0) {
+			  									System.out.println("No hay productos con stock menor a "+ x);
+			  						}
 			  			
-			  			
-			  			
-			  			System.out.println("Estos artículos tienen menos stock que : "+ x );
-			  			break;
+			  							break;
 				  
 			  		case SALIR:
 			  			System.out.println("AU REVOIR, CIAO, ADIOS, AGUR, BYE..AIOOOO!");
