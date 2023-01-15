@@ -60,6 +60,15 @@ public double precioTotal() {
 	
 }
 
+public void mostrarEnPantalla() {
+	System.out.println(
+			this.numero+ "\t" + 	
+			this.articulo + "\t" + 
+			this.cantidad + "\t" +
+			this.precioTotal()
+			);
+}
+
 @Override
 public String toString() {
 	
