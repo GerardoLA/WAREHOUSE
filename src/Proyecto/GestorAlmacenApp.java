@@ -1,6 +1,8 @@
 package Proyecto;
 
 import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -21,7 +23,7 @@ public class GestorAlmacenApp {
 	 * new Scanner(System.in);
 	 */
 
-	public void run() throws FileNotFoundException {
+	public void run() throws FileNotFoundException, ParseException {
 
 		/*
 		 * Almacen articulosAlmacen=new Almacen();
@@ -40,7 +42,7 @@ public class GestorAlmacenApp {
 
 			switch (opcion) {
 			case REALIZAR_VENTA:
-				realizarVenta();
+			/*	realizarVenta();*/
 				break;
 
 			case REALIZAR_COMPRA:
@@ -128,12 +130,58 @@ public class GestorAlmacenApp {
 				System.out.println("Ahora el stock de "+a.getName()+" "+a.getMark()+" con codigo "+ a.getCode()+" es: "+a.getStock());
 			}
 			
-		}scan.close();
+		}
 				
 	}
 
-	private void realizarVenta() {
-
+	/*private void realizarVenta() throws ParseException {
+		Scanner scan=new Scanner(System.in);
+		
+		Factura factura = new Factura();
+		
+		System.out.println("introduce el numero de factura");
+		factura.setNumero(Integer.parseInt(scan.nextLine()));
+		
+		System.out.println("Introduce el nombre de la empresa");
+		factura.setNombreEmpresa(scan.nextLine());
+		
+		System.out.println("Introduce la fecha (dd/MM/yyyy)");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		factura.setFecha(sdf.parse(scan.nextLine()));
+		
+		System.out.println("concepto");
+		factura.setConcepto(scan.nextLine());
+		
+		String opcion;
+		do {
+			imprimirOpciones();
+			opcion = scan.nextLine();
+			
+			if(opcion.equals("L")){
+				LineaFactura lineaF = new LineaFactura();
+				
+				System.out.println(("Introduce el numero de linea"));
+				lineaF.setNumero(Integer.parseInt(scan.nextLine()));
+				
+				//AQUI CASCA
+				System.out.println("Introduce el articulo");
+				lineaF.setArticulo(null);
+				
+				System.out.println("introduce la cantidad");
+				lineaF.setCantidad(Integer.parseInt(scan.nextLine()));
+				
+				factura.addLinea(lineaF);
+				
+			}
+		}while(!opcion.equals("I"));
+		
+		factura.mostrarEnPantalla();
 	}
+
+	private void imprimirOpciones() {
+		System.out.println("I - Imprimir Factura");
+		System.out.println("L - introducir linea ed factura");
+		
+	}*/
 
 }

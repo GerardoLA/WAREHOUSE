@@ -25,7 +25,9 @@ public class Factura {
 			
 	}
 
-
+	public Factura() {
+		lineas = new ArrayList<LineaFactura>();
+	}
 	
 	
 	public int getNumero() {
@@ -71,8 +73,6 @@ public class Factura {
 	
 	
 	public void mostrarEnPantalla() {
-	
-	  
 	  
 	System.out.println("Numero factura: " + this.numero + "\t\t" + this.nombreEmpresa);
 	System.out.println("Fecha: " + new SimpleDateFormat("dd/MM/yyyy").format(this.fecha));
@@ -92,8 +92,9 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 		Scanner scan=new Scanner(System.in);
 		System.out.println("introduce el numro de linea que deseas eliminar");
 		numeroLinea=scan.nextInt();
-		
 		lineas.remove(numeroLinea);
+		scan.close();
+	
 	}
 	
 	public void addLinea(LineaFactura linea) {
@@ -120,7 +121,7 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 	}
 	
 	public void guardarEnFichero() {
-		//TODO
+		
 	}
 	
 	/*	EJEMPLO

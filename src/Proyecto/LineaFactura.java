@@ -69,6 +69,14 @@ public void mostrarEnPantalla() {
 			);
 }
 
+
+public String formatoFichero() {
+		String formato=this.numero + ";" + this.articulo.getName() + ";"+this.articulo.getMark()+";"
+		+this.cantidad;
+		return formato;
+}
+
+
 @Override
 public String toString() {
 	
