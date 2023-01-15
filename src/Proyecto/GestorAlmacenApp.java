@@ -59,7 +59,7 @@ public class GestorAlmacenApp {
 				break;
 
 			case VER_EL_ARTICULO_MAS_CARO:
-				System.out.println(articulosAlmacen.elMasCaro());
+				System.out.println("El articulo más caro del almacen es: " + articulosAlmacen.elMasCaro());
 				break;
 
 			case VER_ARTICULOS_CON_MENOS_STOCK_QUE_X:
@@ -67,7 +67,7 @@ public class GestorAlmacenApp {
 
 				int x = Integer.parseInt(scan.nextLine());
 
-				System.out.println("los articulos con menos stock de " + x + "son :");
+				System.out.println("los articulos con menos stock de " + x + " son: ");
 				int contador = 0;
 				for (Articulo a : articulosAlmacen.articulos) {
 					if (a.getStock() < x) {
@@ -134,8 +134,7 @@ public class GestorAlmacenApp {
 				
 	}
 
-	/*pdte
-	 * private void realizarVenta() throws ParseException {
+	/*private void realizarVenta() throws ParseException {
 		Scanner scan=new Scanner(System.in);
 		
 		Factura factura = new Factura();
@@ -165,8 +164,9 @@ public class GestorAlmacenApp {
 				lineaF.setNumero(Integer.parseInt(scan.nextLine()));
 				
 				//AQUI CASCA
-				System.out.println("Introduce el articulo");
-				lineaF.setArticulo(null);
+				System.out.println("Introduce el nombre del articulo");
+				nombre=scan.nextLine();
+				
 				
 				System.out.println("introduce la cantidad");
 				lineaF.setCantidad(Integer.parseInt(scan.nextLine()));
@@ -177,12 +177,12 @@ public class GestorAlmacenApp {
 		}while(!opcion.equals("I"));
 		
 		factura.mostrarEnPantalla();
-	}
+	}*/
 
 	private void imprimirOpciones() {
 		System.out.println("I - Imprimir Factura");
 		System.out.println("L - introducir linea ed factura");
 		
-	}*/
+	}
 
 }
