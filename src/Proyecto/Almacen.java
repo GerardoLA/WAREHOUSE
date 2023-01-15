@@ -2,6 +2,7 @@ package Proyecto;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -48,6 +49,9 @@ public class Almacen  {
 			}
 		}scan.close();
 	}
+	
+	
+		
 	
 		public Articulo elMasCaro() {
 			double precio = 0;
@@ -118,9 +122,33 @@ public class Almacen  {
 		return false;
 		}
 		
+		public ArrayList<Articulo>equivalentes(Articulo articulo){
+				ArrayList<Articulo>equivalentes = new ArrayList<Articulo>();
+				Double rest;
+				for (Articulo arti : articulos) {
+					if(arti.getName().equals(articulo.getName())) {
+						if(arti.getPrecio()>articulo.getPrecio()){
+							rest=arti.getPrecio()-articulo.getPrecio();
+						}else {
+							rest=articulo.getPrecio()-arti.getPrecio();
+						}
+						if (rest <=0.3) {
+							equivalentes.add(arti);
+						}
+					}
+					
+				}return equivalentes;
+		}
+		
 		public ArrayList<Articulo>ordenarPorPrecio(String orden){
+			
 			ArrayList<Articulo>ordenados = articulos;
-			//TODO
+			Scanner scan=new Scanner(System.in);
+			System.out.println("Introduce ASC si quieres que se ordene ascendete o DESC si "
+					+ 			"quieres que el orden sea descendente ");
+			String tipoOrden=scan.nextLine();
+			
+			
 			return ordenados ;	
 		}
 		

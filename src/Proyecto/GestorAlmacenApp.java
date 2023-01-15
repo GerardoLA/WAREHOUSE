@@ -72,6 +72,7 @@ public class GestorAlmacenApp {
 						System.out.println(a.getName() + " " + a.getMark() + ",con codigo " + a.getCode() + " "
 								+ " quedan :" + a.getStock() + " unidades");
 						contador++;
+						 
 						// También se podría con "visualizarArticulo, saldria el articulo entero..
 						/* a.visualizarArticulo(); */
 					}
@@ -126,9 +127,8 @@ public class GestorAlmacenApp {
 				System.out.println("Ahora el stock de "+a.getName()+" "+a.getMark()+" con codigo "+ a.getCode()+" es: "+a.getStock());
 			}
 			
-		}
-		
-		
+		}scan.close();
+				
 	}
 
 	private void realizarVenta() {
