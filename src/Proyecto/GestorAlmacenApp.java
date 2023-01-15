@@ -134,7 +134,8 @@ public class GestorAlmacenApp {
 				
 	}
 
-	/*private void realizarVenta() throws ParseException {
+	/*pdte
+	 * private void realizarVenta() throws ParseException {
 		Scanner scan=new Scanner(System.in);
 		
 		Factura factura = new Factura();
