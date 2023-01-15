@@ -137,23 +137,30 @@ public class Almacen  {
 						}
 					}
 					
+					
 				}return equivalentes;
 		}
 		
 		public ArrayList<Articulo>ordenarPorPrecio(String orden){
 			
-			ArrayList<Articulo>ordenados = articulos;
+			
 			Scanner scan=new Scanner(System.in);
-			System.out.println("Introduce ASC si quieres que se ordene ascendete o DESC si "
+		/*	System.out.println("Introduce ASC si quieres que se ordene ascendete o DESC si "
 					+ 			"quieres que el orden sea descendente ");
 			String tipoOrden=scan.nextLine();
-			
-			
-			return ordenados ;	
+			if(tipoOrden.equals("ASC")) {
+				
+			}*/
+			ArticuloComparatorPr comparator = new ArticuloComparatorPr();
+			articulos.sort(comparator);
+			return articulos;
+				
 		}
 		
 		public void ordenarPorStock(String orden) {
-			//TODO
+			ArticuloComparatorStock comparator = new ArticuloComparatorStock();
+			articulos.sort(comparator);
+			
 		}
 }
 	

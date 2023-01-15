@@ -74,6 +74,7 @@ public class GestorAlmacenApp {
 						contador++;
 						 
 						// También se podría con "visualizarArticulo, saldria el articulo entero..
+						
 						/* a.visualizarArticulo(); */
 					}
 
