@@ -41,6 +41,7 @@ public class GestorAlmacenApp {
 			case REALIZAR_VENTA:
 				Factura factura=new Factura();
 				SimpleDateFormat fecha=new SimpleDateFormat();
+				int numerolf=1;
 				
 				System.out.println("introduce el numero de factura: ");
 				factura.setNumero(Integer.parseInt(scan.nextLine()));
@@ -51,6 +52,29 @@ public class GestorAlmacenApp {
 				factura.setFecha(sdf.parse(scan.nextLine()));
 				System.out.println("introduce el concepto");
 				factura.setConcepto(scan.nextLine());
+				
+				String respuesta;
+				 LineaFactura lf=new LineaFactura();
+				 do {
+					 
+				
+				System.out.println("quieres introducir linea de factura?si/no");
+				respuesta=scan.nextLine();
+				if(respuesta.equals("si")) {
+					
+					
+					lf.setNumero(numerolf);
+					System.out.println("codigo del articulo que quieres :");
+					String codigo=scan.nextLine();
+					lf.setArticulo(articulosAlmacen.articulo(codigo));
+					
+					System.out.println("introduce la cantidad que quieres: ");
+					int cantidad=Integer.parseInt(scan.nextLine());
+					lf.mostrarEnPantalla();
+					numerolf++;	 }
+					
+				}while(respuesta.equals("si"));
+					
 				
 				break;
 				
