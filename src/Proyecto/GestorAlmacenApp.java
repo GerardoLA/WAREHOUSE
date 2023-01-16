@@ -127,6 +127,7 @@ public class GestorAlmacenApp {
 		for (Articulo a : articulosAlmacen.articulos) {
 			if(codigoCompra.equals(a.getCode())) {
 				a.incrementarStock(cantidadCompra);
+				//articulosAlmacen.articulos.add(a);//corregido en clase...me faltaba!!!melon!!
 				System.out.println("Ahora el stock de "+a.getName()+" "+a.getMark()+" con codigo "+ a.getCode()+" es: "+a.getStock());
 			}
 			
