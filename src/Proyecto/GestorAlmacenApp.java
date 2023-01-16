@@ -70,12 +70,19 @@ public class GestorAlmacenApp {
 					
 					System.out.println("introduce la cantidad que quieres: ");
 					int cantidad=Integer.parseInt(scan.nextLine());
-					lf.mostrarEnPantalla();
-					numerolf++;	 }
+					lf.setCantidad(cantidad);
+					lf.precioTotal();
+					lf.mostrarEnPantalla(); //hasta aqui ok
 					
-				}while(respuesta.equals("si"));
+					factura.addLinea(lf);//solo me muestra la ultima linea
+					numerolf++;
 					
-				
+				}
+					
+				}while(!respuesta.equals("no"));
+				 
+					
+				factura.mostrarEnPantalla();
 				break;
 				
 

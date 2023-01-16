@@ -100,6 +100,7 @@ public class Almacen  {
 		
 		
 		/*el método articulo recibe un código y devuelve el objeto articulo entero.*/
+		
 		public Articulo articulo(String codigo) {
 			Articulo articulo = null;
 			
@@ -113,6 +114,7 @@ public class Almacen  {
 		}
 		/*El método disponibilidad recibe un número y un código de artículo, y si hay más unidades 
 		 * que el parámetro número que ha recibido devolverá true, si no false.*/
+		
 		public boolean disponibilidad (String codigoProducto, int stock) {
 			for (Articulo articulo : articulos) {
 				if(codigoProducto.equals(articulo.getCode()) && stock <= articulo.getStock()) {

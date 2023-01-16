@@ -55,7 +55,7 @@ public void setCantidad(int cantidad) {
 
 public double precioTotal() {
 	double precioTotal=0.0;
-	precioTotal= cantidad*articulo.getPrecio();
+	precioTotal= this.cantidad*articulo.getPrecio();
 	return precioTotal;
 	
 }
@@ -63,7 +63,7 @@ public double precioTotal() {
 public void mostrarEnPantalla() {
 	System.out.println(
 			this.numero+ "\t" + 	
-			this.articulo + "\t" + 
+			this.articulo.getMark()+ "\t" + 
 			this.cantidad + "\t" +
 			this.precioTotal()
 			);
