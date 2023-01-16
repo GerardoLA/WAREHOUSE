@@ -25,9 +25,6 @@ public class GestorAlmacenApp {
 
 	public void run() throws FileNotFoundException, ParseException {
 
-		/*
-		 * Almacen articulosAlmacen=new Almacen();
-		 */
 		Scanner scan = new Scanner(System.in);
 
 		Almacen articulosAlmacen = new Almacen();
@@ -42,7 +39,7 @@ public class GestorAlmacenApp {
 
 			switch (opcion) {
 			case REALIZAR_VENTA:
-			/*	realizarVenta();*/
+				realizarVenta();
 				break;
 
 			case REALIZAR_COMPRA:
@@ -78,14 +75,14 @@ public class GestorAlmacenApp {
 						// También se podría con "visualizarArticulo, saldria el articulo entero..
 						
 						/* a.visualizarArticulo(); */
-					}
+						}
 
-				}
-				if (contador == 0) {
+							}
+					if (contador == 0) {
 					System.out.println("No hay productos con stock menor a " + x);
-				}
+						}
 
-				break;
+						break;
 
 			case SALIR:
 				System.out.println("AU REVOIR, CIAO, ADIOS, AGUR, BYE..AIOOOO!");
@@ -93,10 +90,15 @@ public class GestorAlmacenApp {
 
 			default:
 				break;
-			}
+				}
 
-		} while (opcion != SALIR);
+			} while (opcion != SALIR);
 
+	}
+
+	private void realizarVenta() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void menuPrincipal() {
@@ -127,7 +129,6 @@ public class GestorAlmacenApp {
 		for (Articulo a : articulosAlmacen.articulos) {
 			if(codigoCompra.equals(a.getCode())) {
 				a.incrementarStock(cantidadCompra);
-				//articulosAlmacen.articulos.add(a);//corregido en clase...me faltaba!!!melon!!
 				System.out.println("Ahora el stock de "+a.getName()+" "+a.getMark()+" con codigo "+ a.getCode()+" es: "+a.getStock());
 			}
 			
@@ -135,50 +136,7 @@ public class GestorAlmacenApp {
 				
 	}
 
-	/*private void realizarVenta() throws ParseException {
-		Scanner scan=new Scanner(System.in);
-		
-		Factura factura = new Factura();
-		
-		System.out.println("introduce el numero de factura");
-		factura.setNumero(Integer.parseInt(scan.nextLine()));
-		
-		System.out.println("Introduce el nombre de la empresa");
-		factura.setNombreEmpresa(scan.nextLine());
-		
-		System.out.println("Introduce la fecha (dd/MM/yyyy)");
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		factura.setFecha(sdf.parse(scan.nextLine()));
-		
-		System.out.println("concepto");
-		factura.setConcepto(scan.nextLine());
-		
-		String opcion;
-		do {
-			imprimirOpciones();
-			opcion = scan.nextLine();
-			
-			if(opcion.equals("L")){
-				LineaFactura lineaF = new LineaFactura();
-				
-				System.out.println(("Introduce el numero de linea"));
-				lineaF.setNumero(Integer.parseInt(scan.nextLine()));
-				
-				//AQUI CASCA
-				System.out.println("Introduce el nombre del articulo");
-				nombre=scan.nextLine();
-				
-				
-				System.out.println("introduce la cantidad");
-				lineaF.setCantidad(Integer.parseInt(scan.nextLine()));
-				
-				factura.addLinea(lineaF);
-				
-			}
-		}while(!opcion.equals("I"));
-		
-		factura.mostrarEnPantalla();
-	}*/
+	
 
 	private void imprimirOpciones() {
 		System.out.println("I - Imprimir Factura");
