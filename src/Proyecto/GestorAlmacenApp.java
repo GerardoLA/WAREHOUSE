@@ -39,8 +39,21 @@ public class GestorAlmacenApp {
 
 			switch (opcion) {
 			case REALIZAR_VENTA:
-				realizarVenta();
+				Factura factura=new Factura();
+				SimpleDateFormat fecha=new SimpleDateFormat();
+				
+				System.out.println("introduce el numero de factura: ");
+				factura.setNumero(Integer.parseInt(scan.nextLine()));
+				System.out.println("introduce el nombre de la empresa: ");
+				factura.setNombreEmpresa(scan.nextLine());
+				System.out.println("Fecha de factura (dd/MM/yyyy)");
+				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+				factura.setFecha(sdf.parse(scan.nextLine()));
+				System.out.println("introduce el concepto");
+				factura.setConcepto(scan.nextLine());
+				
 				break;
+				
 
 			case REALIZAR_COMPRA:
 				realizarCompra();
@@ -96,10 +109,7 @@ public class GestorAlmacenApp {
 
 	}
 
-	private void realizarVenta() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	private void menuPrincipal() {
 		// TODO Auto-generated method stub
