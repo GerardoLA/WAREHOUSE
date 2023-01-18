@@ -54,14 +54,13 @@ public class GestorAlmacenApp {
 				factura.setConcepto(scan.nextLine());
 				
 				String respuesta;
-				 LineaFactura lf=new LineaFactura();
+				 
 				 do {
+					 LineaFactura lf=new LineaFactura();
 					 
-				
 				System.out.println("quieres introducir linea de factura?si/no");
 				respuesta=scan.nextLine();
 				if(respuesta.equals("si")) {
-					
 					
 					lf.setNumero(numerolf);
 					System.out.println("codigo del articulo que quieres :");
@@ -71,18 +70,20 @@ public class GestorAlmacenApp {
 					System.out.println("introduce la cantidad que quieres: ");
 					int cantidad=Integer.parseInt(scan.nextLine());
 					lf.setCantidad(cantidad);
-					lf.precioTotal();
-					lf.mostrarEnPantalla(); //hasta aqui ok
 					
-					factura.addLinea(lf);//solo me muestra la ultima linea
+					lf.precioTotallf();
+					lf.mostrarEnPantalla(); //hasta aqui ok
+				
 					numerolf++;
+					factura.addLinea(lf);
 					
 				}
 					
 				}while(!respuesta.equals("no"));
-				 
-					
+				 factura.precioTotal();
+				System.out.println(factura.precioTotal());	
 				factura.mostrarEnPantalla();
+				//System.out.println(precioTotalFinal);
 				break;
 				
 
