@@ -29,6 +29,7 @@ public class GestorAlmacenApp {
 
 		Almacen articulosAlmacen = new Almacen();
 		articulosAlmacen.cargarDatos();
+		double precioTotalFinal=0.0;
 
 		int opcion;
 
@@ -54,9 +55,9 @@ public class GestorAlmacenApp {
 				factura.setConcepto(scan.nextLine());
 				
 				String respuesta;
-				 LineaFactura lf=new LineaFactura();
+				 
 				 do {
-					 
+					 LineaFactura lf=new LineaFactura();	 
 				
 				System.out.println("quieres introducir linea de factura?si/no");
 				respuesta=scan.nextLine();
@@ -77,12 +78,16 @@ public class GestorAlmacenApp {
 					factura.addLinea(lf);//solo me muestra la ultima linea
 					numerolf++;
 					
+					
+					
 				}
 					
 				}while(!respuesta.equals("no"));
-				 
+				factura.precioTotal();
+				System.out.println(factura.precioTotal());
 					
 				factura.mostrarEnPantalla();
+				System.out.println(precioTotalFinal);
 				break;
 				
 

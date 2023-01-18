@@ -114,7 +114,7 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 	public double precioTotal() {
 		double precioTotal=0.0;
 		for (LineaFactura lineaFactura : lineas) {
-			precioTotal=lineaFactura.precioTotal();	
+			precioTotal=precioTotal+lineaFactura.precioTotal();	
 		}
 		
 		return precioTotal;
