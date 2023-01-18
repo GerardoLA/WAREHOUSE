@@ -57,16 +57,12 @@ public class GestorAlmacenApp {
 				String respuesta;
 				 
 				 do {
-<<<<<<< HEAD
+
 					 LineaFactura lf=new LineaFactura();
-					 
-=======
-					 LineaFactura lf=new LineaFactura();	 
-				
->>>>>>> branch 'master' of https://github.com/GerardoLA/WAREHOUSE.git
-				System.out.println("quieres introducir linea de factura?si/no");
-				respuesta=scan.nextLine();
-				if(respuesta.equals("si")) {
+					
+					 System.out.println("quieres introducir linea de factura?si/no");
+					 respuesta=scan.nextLine();
+					 if(respuesta.equals("si")) {
 					
 					lf.setNumero(numerolf);
 					System.out.println("codigo del articulo que quieres :");
@@ -88,20 +84,19 @@ public class GestorAlmacenApp {
 				}
 					
 				}while(!respuesta.equals("no"));
-<<<<<<< HEAD
+
 				 factura.precioTotal();
 				System.out.println(factura.precioTotal());	
-=======
-				factura.precioTotal();
-				System.out.println(factura.precioTotal());
+
+			
 					
->>>>>>> branch 'master' of https://github.com/GerardoLA/WAREHOUSE.git
+
 				factura.mostrarEnPantalla();
-<<<<<<< HEAD
+
 				//System.out.println(precioTotalFinal);
-=======
+
 				System.out.println(precioTotalFinal);
->>>>>>> branch 'master' of https://github.com/GerardoLA/WAREHOUSE.git
+
 				break;
 				
 
