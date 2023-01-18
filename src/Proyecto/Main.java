@@ -14,4 +14,3 @@ public class Main {
 			gaa.run();
 		}
 }
-

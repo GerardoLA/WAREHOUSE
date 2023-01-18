@@ -114,13 +114,9 @@ System.out.println("\t\t\t---Total: " + this.precioTotal());
 	public double precioTotal() {
 		double precioTotal=0.0;
 		for (LineaFactura lineaFactura : lineas) {
-//<<<<<<< HEAD
 			precioTotal=precioTotal+lineaFactura.precioTotallf();	
-//=======
-//			precioTotal=precioTotal+lineaFactura.precioTotal();	
-//>>>>>>> branch 'master' of https://github.com/GerardoLA/WAREHOUSE.git
-		}
-		
+
+		}		
 		return precioTotal;
 	}
 	
